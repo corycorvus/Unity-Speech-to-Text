@@ -1,6 +1,8 @@
 # Speech-to-Text
 This plugin interfaces Windows streaming, Wit.ai non-streaming, Google streaming/non-streaming, and IBM Watson streaming/non-streaming speech-to-text. There is also a sample scene that compares each of these APIs. [This article](https://cms-labs.hq.unity3d.com/article/speech-recognition-and-vr) on the Unity Labs website explains some of the concepts behind speech recognition and discusses the motivation behind this package.
 
+[Frequently asked questions can be found here.](https://bitbucket.org/Unity-Technologies/speech-to-text/wiki/FAQ)
+
 ## Table of Contents
 * [Requirements](#requirements)
 * [Setting up the sample scene](#setting-up-the-sample-scene)
