@@ -22,6 +22,7 @@ This plugin interfaces Windows streaming, Wit.ai non-streaming, Google streaming
 
 ## Requirements
 * Matthew Schoen from Unity Labs has given us permission to include his JSON library in the package.
+* [UniWeb](https://www.assetstore.unity3d.com/en/#!/content/483) **Note:** [as it has been pointed out](https://bitbucket.org/Unity-Technologies/speech-to-text/issues/1/remove-uniweb-dependency), UniWeb seems to no longer be maintained and you could easily replace it with other options.
 * Windows and Google streaming speech-to-text will only work in Windows environments.
 * Watson streaming and non-streaming speech-to-text both rely on IBM's Watson SDK for Unity, which must be manually added to the project. [The Unity Watson SDK can be found here.](https://github.com/watson-developer-cloud/unity-sdk)
 * Google non-streaming and Wit.ai non-streaming speech-to-text both rely on UniWeb, which must be manually added to the project. [UniWeb can be found on the Unity Asset Store here.](https://www.assetstore.unity3d.com/en/#!/content/483)
