@@ -41,17 +41,17 @@ namespace UnitySpeechToText.Services
         /// </summary>
         /// <param name="watsonResult">Watson SpeechResult object</param>
         /// <returns>A SpeechToTextResult object</returns>
-        public SpeechToTextResult CreateSpeechToTextResult(SpeechResult watsonResult)
+        public SpeechToTextResult CreateSpeechToTextResult(SpeechRecognitionResult watsonResult)
         {
             var textResult = new SpeechToTextResult();
-            textResult.IsFinal = watsonResult.Final;
-            textResult.TextAlternatives = new TextAlternative[watsonResult.Alternatives.Length];
+            textResult.IsFinal = watsonResult.final;
+            textResult.TextAlternatives = new TextAlternative[watsonResult.alternatives.Length];
             for (int i = 0; i < textResult.TextAlternatives.Length; ++i)
             {
-                SpeechAlt watsonAlternative = watsonResult.Alternatives[i];
+                SpeechRecognitionAlternative watsonAlternative = watsonResult.alternatives[i];
                 var alternative = new WatsonTextAlternative();
-                alternative.Text = watsonAlternative.Transcript;
-                alternative.Confidence = (float)watsonAlternative.Confidence;
+                alternative.Text = watsonAlternative.transcript;
+                alternative.Confidence = (float)watsonAlternative.confidence;
                 alternative.TimeStamps = watsonAlternative.Timestamps;
                 alternative.WordConfidenceValues = watsonAlternative.WordConfidence;
                 textResult.TextAlternatives[i] = alternative;
