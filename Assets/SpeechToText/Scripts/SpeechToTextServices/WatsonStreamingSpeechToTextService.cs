@@ -109,11 +109,11 @@ namespace UnitySpeechToText.Services
         /// Function that is called when the Watson API returns a result.
         /// </summary>
         /// <param name="results">List of speech-to-text results</param>
-        protected void OnSpeechToTextResult(SpeechResultList results)
+        protected void OnSpeechToTextResult(SpeechRecognitionEvent watsonEvent)
         {
-            if (results.HasResult())
+            if (watsonEvent.HasResult())
             {
-                SpeechResult watsonResult = results.Results[0];
+                SpeechRecognitionResult watsonResult = watsonEvent.results[0];
                 var textResult = m_WatsonSpeechToTextComponent.CreateSpeechToTextResult(watsonResult);
                 if (m_OnTextResult != null)
                 {
